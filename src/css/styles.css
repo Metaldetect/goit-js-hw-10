@@ -1,17 +1,30 @@
-/* Стилі для .breed-select */
-.breed-select {
-  display: block;
-  margin: 30px auto;
-  width: 200px;
-  height: 40px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 6px;
+body {
+  background: linear-gradient(100deg, #8e24aa, #a76754, #00acc1);
+  background-size: 600% 600%;
+  animation: gradientAnimation 20s ease infinite;
 }
 
-/* Стилі для .cat-info */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.breed-select {
+  max-width: 400px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .cat-info {
   display: flex;
   flex-direction: column;
@@ -19,7 +32,6 @@
   text-align: center;
 }
 
-/* Стилі для .cat-container-info */
 .cat-container-info {
   margin-top: 10px;
   border: 1px solid #ccc;
@@ -28,13 +40,11 @@
   background-color: #f7f7f7;
 }
 
-/* Стилі для .cat-name */
 .cat-name {
   font-size: 18px;
   font-weight: bold;
 }
 
-/* Стилі для .country */
 .country {
   font-size: 16px;
   font-style: italic;
@@ -45,7 +55,6 @@
   margin-top: 5px;
 }
 
-/* Стилі для .wikipedia-link */
 .wikipedia-link {
   margin-top: 5px;
   display: inline-block;
@@ -59,8 +68,6 @@
   text-decoration: underline;
 }
 
-/* Стилі для .loader */
-
 .loader {
   position: absolute;
   top: 50%;
@@ -73,13 +80,6 @@
   text-indent: -9999em;
   animation: mulShdSpin 1.3s infinite linear;
   transform: translateZ(0);
-}
-.hidden {
-  display: none;
-}
-
-.show {
-  display: block;
 }
 @keyframes mulShdSpin {
   0%,
@@ -117,7 +117,6 @@
   }
 }
 
-/* Стилі для .error */
 .error {
   display: none;
   text-align: center;
@@ -134,26 +133,9 @@
 .error.show {
   display: block;
 }
-
-/* Стилі для body з переливаючим фоном */
-body {
-  background: linear-gradient(100deg, #8e24aa, #a76754, #00acc1);
-  background-size: 600% 600%;
-  animation: gradientAnimation 20s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .hidden {
   display: none;
+}
+.show {
+  display: block;
 }
