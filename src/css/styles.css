@@ -1,5 +1,159 @@
+/* Стилі для .breed-select */
 .breed-select {
+  display: block;
+  margin: 30px auto;
   width: 200px;
-  height: 50px;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
   cursor: pointer;
+  padding: 6px;
+}
+
+/* Стилі для .cat-info */
+.cat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Стилі для .cat-container-info */
+.cat-container-info {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+/* Стилі для .cat-name */
+.cat-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Стилі для .country */
+.country {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.cat-description,
+.cat-temperament {
+  margin-top: 5px;
+}
+
+/* Стилі для .wikipedia-link */
+.wikipedia-link {
+  margin-top: 5px;
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.wikipedia-link:hover,
+.wikipedia-link:focus {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Стилі для .loader */
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em,
+      0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+/* Стилі для .error */
+.error {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff3d00;
+  background-color: #fff;
+  border: 2px solid #ff3d00;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.error.show {
+  display: block;
+}
+
+/* Стилі для body з переливаючим фоном */
+body {
+  background: linear-gradient(100deg, #8e24aa, #a76754, #00acc1);
+  background-size: 600% 600%;
+  animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hidden {
+  display: none;
 }
