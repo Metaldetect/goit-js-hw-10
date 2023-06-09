@@ -41,7 +41,6 @@ function displayCatInfo(cat) {
 
 function handleError(error) {
   loaderElement.classList.add('hidden');
-  console.error('Oops! Something went wrong:', error);
   Notiflix.Notify.failure(
     'Oops! Something went wrong! Try reloading the page!'
   );
