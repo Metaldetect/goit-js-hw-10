@@ -2,13 +2,13 @@ export function fetchBreeds() {
   return fetch('https://api.thecatapi.com/v1/breeds')
     .then(response => response.json())
     .then(data => {
-      return data.map(breed => ({
-        value: breed.id,
-        label: breed.name,
+      return data.map(({ id, name }) => ({
+        value: id,
+        label: name,
       }));
     })
     .catch(error => {
-      console.error('Помилка при отриманні порід котів:', error);
+      console.error('Error fetching cat breeds:', error);
       return [];
     });
 }
@@ -18,12 +18,11 @@ export function fetchCatByBreed(breedId) {
 
   return fetch(url)
     .then(response => response.json())
-    .then(data => {
-      const cat = data[0];
+    .then(([cat]) => {
       return cat;
     })
     .catch(error => {
-      console.error('Сталася помилка при отриманні даних про кота:', error);
+      console.error('Error fetching cat data:', error);
       throw error;
     });
 }
