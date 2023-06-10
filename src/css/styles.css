@@ -130,9 +130,6 @@ body {
   margin-bottom: 20px;
 }
 
-.error.show {
-  display: block;
-}
 .hidden {
   display: none;
 }

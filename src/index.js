@@ -28,7 +28,7 @@ function displayCatInfo(cat) {
     <img src="${cat.url}" alt="Cat Image" width="1080" class="cat-image">
     <div class="cat-container-info">
       <h2 class="cat-name">Name: ${name}</h2>
-      <h2 class="country">From: ${origin}</h2>
+      <h3 class="country">From: ${origin}</h3>
       <p class="cat-description">Description: ${description}</p>
       <p class="cat-temperament">Temperament: ${temperament}</p>
       <a href="${wikipedia_url}" class="wikipedia-link" target="_blank">Wikipedia</a>
